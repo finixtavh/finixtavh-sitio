@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "finixtavh-sitio",
+  "name": "finixtavh",
   "compatibility_date": "2026-05-04",
   "observability": {
     "enabled": true
