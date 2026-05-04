@@ -1,11 +1,9 @@
-
 @font-face {
     font-family: 'JetBrainsMonoNerd';
     src: url('../Fonts/JetBrainsMono-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 }
-
 
 @font-face {
     font-family: 'JetBrainsMonoNerd';
@@ -14,14 +12,12 @@
     font-style: normal;
 }
 
-
 @font-face {
     font-family: 'JetBrainsMonoNerd';
     src: url('../Fonts/JetBrainsMono-Italic.woff2') format('woff2');
     font-weight: 400;
     font-style: italic;
 }
-
 
 @font-face {
     font-family: 'JetBrainsMonoNerd';
@@ -30,24 +26,31 @@
     font-style: italic;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: "JetBrainsMonoNerd";
+    font-family: "JetBrainsMonoNerd", monospace;
     font-weight: normal;
     background: #13131e;
     color: #cdd6f4;
+    margin: 0;
+    padding: 0;
 }
 
 a {
     color: #f5e0dc;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: #f2cdcd;
 }
 
 img {
     height: auto;
     width: 200px;
-}
-
-* {
-    box-sizing: content-box;
 }
 
 hr {
@@ -58,35 +61,111 @@ hr {
 
 h1 {
     background: linear-gradient(to right, #f5e0dc, #f82763);
-    background-clip: text;              
-    -webkit-background-clip: text;      
+    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: 6px;
+}
+
+h2 {
+    color: #f2cdcd;
+    border-left: 3px solid #cba6f7;
+    padding-left: 10px;
+    margin-top: 0;
+}
+
+h3 {
+    color: #cba6f7;
+}
+
+.Primer-Curriculum {
+    text-align: center;
+    padding: 20px 0 10px;
+}
+
+.parraf-1 {
+    color: #7f849c;
+    margin-top: 0;
+    font-size: 0.9em;
+}
+
+.Header-Class {
+    background-color: #313244;
+    padding: 12px 20px;
+    margin: 0 auto 20px;
+    border-radius: 3px;
+    border: 2px solid #f2cdcd;
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.Header-Class hr {
+    margin: 8px 0;
+}
+
+.Header-Class nav {
+    padding: 6px 0;
+}
+
+.Header-Class nav a {
+    margin: 0 8px;
+}
+
+.Formulario-Section,
+.Estudios-Section,
+.Habilidades-Section,
+.Sobre-Mi-Section {
+    background-color: #1e1e2e;
+    padding: 24px 28px;
+    margin: 0 auto 20px;
+    border-radius: 5px;
+    border: 2px solid #cba6f7;
+    width: 80%;
+    max-width: 900px;
+}
+
+.sobre-mi-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.sobre-mi-header h2 {
+    margin: 0;
+}
+
+.portrait {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #cba6f7;
+    flex-shrink: 0;
+}
+
+.screenshots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 10px;
 }
 
 .screenshot-wm {
     height: auto;
-    width: 650px;
-    margin-top: 0px;
-}
-
-.inteco-logo {
-    height: auto; 
-    width: 35px;
-    vertical-align: middle;
+    width: 48%;
+    min-width: 280px;
+    border-radius: 10px;
+    flex: 1;
 }
 
 .preview-container h5 {
-    margin: 0;
-    margin-left: 17px;
-}
-
-.preview-container hr {
-    margin: 0;
-
-}
-
-.preview-container img {
-    border-radius: 25px;
+    margin: 0 0 8px 0;
+    color: #7f849c;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .preview-container hr {
@@ -95,49 +174,51 @@ h1 {
     background: linear-gradient(to right, transparent, #855870, #beabb3, transparent);
 }
 
-.Formulario-Section,
-.Estudios-Section,
-.Habilidades-Section,
-.Sobre-Mi-Section {
-    background-color: #1e1e2e;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 5px;
-    border: 2px solid #cba6f7;
-    width: 80%;
+ul {
+    padding-left: 20px;
 }
 
-.Header-Class {
-    background-color: #313244;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 3px;
-    border: 2px solid #f2cdcd;
-    width: 80%;
-    text-align: center;
-}
-
-.Primer-Curriculum {
-    text-align: center;
+ul li {
+    margin-bottom: 6px;
 }
 
 .Lang {
-  display: inline-block;
-  width: 200px; 
+    display: inline-block;
+    width: 200px;
 }
 
 .Lang-Experience {
-  color: #7f849c;
+    color: #7f849c;
 }
 
 .Badges {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
+    margin-top: 14px;
+    margin-bottom: 6px;
 }
 
 .Badges img {
-    height: 28px;      
-    min-width: 100px;
-    max-width: 100px;  
+    height: 28px;
+    width: auto;
+    min-width: 80px;
+    max-width: 150px;
+}
+
+.Redes {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #313244;
+}
+
+.Redes p {
+    line-height: 1.8;
+    margin-top: 6px;
+}
+
+.footer-hr {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto 40px;
 }
