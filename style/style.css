@@ -39,11 +39,12 @@ Retrieved 2026-07-31, License - CC BY-SA 4.0
 .trig, .trig-i-x {
   width: 60px;
   height: 60px;
-  background: radial-gradient(140% 125% at right -20% top -10%, transparent 99%, #cba6f7)
+  background: radial-gradient(140% 130% at right -20% top -10%, transparent 99%, #cba6f7);
+  border-bottom-left-radius: 5px;
 }
 
 .trig-i-x {
-    transform: scaleX(-1);
+    transform: translateX(1px) scaleX(-1);
 }
 
 .cont-trig {
