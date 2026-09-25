@@ -25,8 +25,11 @@
         "I USE ARCH AND HYPRLAND BTW",
         "NOTHING EVER HAPPENS"
         ];
-
-        document.title = rstring[Math.floor(Math.random() * rstring.length)];
+        document.addEventListener('DOMContentLoaded', () => {
+        const h = document.getElementById('h1id');
+        if (h) h.textContent = rstring[Math.floor(Math.random() * rstring.length)];
+        });
+        // document.title = rstring[Math.floor(Math.random() * rstring.length)];
     </script>
     <link rel="stylesheet" href="style/style.css">
 </head>
@@ -34,7 +37,7 @@
 
     <header id="encabezado-principal">
         <div class="Primer-Curriculum">
-            <h1>FN-Finixtavh</h1>
+            <h1 id="h1id"></h1>
             <p class="parraf-1">finixtavh.xyz</p>
         </div>
     </header>
@@ -62,38 +65,23 @@
         </p>
 
         <div class="preview-container">
-            <h5>Preview de los Dotfiles: (Desactualizado)</h5>
+            <h5>Preview de los Dotfiles:</h5>
             <div class="screenshots">
-                <img class="screenshot-wm" src="img/screenshot.png" alt="Dotfiles screenshot 1">
-                <img class="screenshot-wm" src="img/image.png" alt="Dotfiles screenshot 2">
+                <img class="screenshot-wm" src="img/fndotss1.png" alt="Dotfiles screenshot 2">
+                <img class="screenshot-wm" src="img/fndotss2.png" alt="Dotfiles screenshot 1">
             </div>
-            <br><hr><br>
+            
+        </div>
+        
+        <div class="center parraf-1"> 
+            <p> Wallpapers of this website and FNDots <a href="https://kriegs.net/"> kriegs.net</a> 
+            </p>
         </div>
     </section>
 
     <section class="Proyectos-Section" id="Proyectos">
         <h2>Proyectos</h2>
-        <!--
-        <div class="Proyectos-div">
-            <h3>TPPRPG</h3>
-            <p>
-                Un RPG de Texto que guarda y lee los datos desde JSON. 
-            </p>
-            <p>
-                Tiene misiones, Sistema de Crafteo, Recoleccion,
-                Guerras, Relaciones entre Guilds, BUffs/Debuffs, 
-                Arbol de Habilidades,
 
-                Pacialmente implementado: Sistema de clima, la IA de las Guilds NPCs, Maestria de Armas 
-                y Armaduras, Ciertos menus, Buscador de Items, ModLoader 
-            </p>
-            <p>
-                Todavia en desarrollo
-            </p>
-            <div class="cont-trig">
-                <div class="trig"></div> <div class="trig-i-x"></div>
-            </div>
-        </div> -->
         <div class="Proyectos-div">
             <h3>Dotfiles-v1</h3>
             <p>
@@ -102,9 +90,23 @@
             <p>
                 Los hize en Arch, utilize Waybar, SwayNC, wlogout y rofi,
                 utilize la paleta de colores Catpuccin Mocha, aunque actualmente estan 
-                desactualizados este es el link "<a href="https://github.com/https://github.com/finixtavh/dotfiles-v1">dotfiles-v1</a>" <div class="parraf-1">(El repo esta privado, pronto lo hare publico)</div>
+                desactualizados este es el link "<a href="https://github.com/https://github.com/finixtavh/dotfiles-v1">dotfiles-v1</a>" <div class="parraf-1">(El repo esta privado, algun dia lo hare publico)</div>
             </p>
+            <img class="screenshot-wm-pr" src="img/screenshot.png" alt="Dotfiles screenshot 1">
+            <img class="screenshot-wm-pr" src="img/image.png" alt="Dotfiles screenshot 2">
         </div>
+
+        <div class="Proyectos-div">
+            <h3>FNDots</h3>
+
+                <p>
+                    Mis actuales dotfiles en Hyprland, hecho en CachyOS utilizando Aylurs-GTK-Shell,
+                    cava, chroma y lrclib.net 
+                    
+                </p>
+                <img class="screenshot-wm-pr" src="img/fndots1.png" alt="">
+                <img class="screenshot-wm-pr" src="img/fndots2.png" alt="">
+        </div> 
 
         <!--
         <div class="Proyectos-div">

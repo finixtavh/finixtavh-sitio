@@ -47,6 +47,12 @@ Retrieved 2026-07-31, License - CC BY-SA 4.0
     transform: translateX(1px) scaleX(-1);
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .cont-trig {
     position: absolute;
     left: 0;
@@ -62,13 +68,30 @@ section {
     position: relative;
 }
 
+html {
+    background-color: #13131e;
+}
+
 body {
     font-family: "JetBrainsMonoNerd", monospace;
     font-weight: normal;
-    background: #13131e;
     color: #cdd6f4;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flow-root;
+    background-color: #13131e;
+    background-image:
+        linear-gradient(rgba(19, 19, 45, 0.7), rgba(9, 9, 15, 0.85)),
+        url("../img/background3.png"), 
+        url("../img/background2.png"),
+        url("../img/background.png"),
+        url("../img/background4.png");
+        
+    background-size: auto, 100% 90%, 100% 90%, 100% 90%, 100% 90%;
+    background-position: center, center 0%, center 33.33%, center 66.67%, center 100%;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-attachment: local, local, local, local, local;
 }
 
 a {
@@ -205,8 +228,27 @@ h3 {
     height: auto;
     width: 48%;
     min-width: 280px;
+    max-width: 100%;
     border-radius: 10px;
     flex: 1;
+    box-sizing: border-box;
+}
+
+.screenshot-wm-pr {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 12px 0;
+}
+
+.Proyectos-div .screenshots .screenshot-wm-pr {
+    width: 48%;
+    min-width: 280px;
+    flex: 1;
+    margin: 0;
 }
 
 .preview-container h5 {
