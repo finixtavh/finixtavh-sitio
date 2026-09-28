@@ -166,7 +166,7 @@ h3 {
 .Header-Class nav a {
     margin: 0 8px;
 }
-
+.Sobre-Mi-Section-Header,
 .Formulario-Section,
 .Estudios-Section,
 .Habilidades-Section,
@@ -182,6 +182,25 @@ h3 {
     max-width: 900px;
 }
 
+
+
+.Sobre-Mi-Section-Header {
+    background-color: #11111b;
+    padding: 20px 20px;
+    margin: 0 auto 20px;
+    border-radius: 3px;
+    border: 1px solid #f38ba8;
+    width: 100%;
+    
+}
+
+.term-text {
+    color: #a6e3a1;
+}
+
+.post-term-text {
+    color: #bac2de;
+}
 .Proyectos-div {
     background-color: #1b2d2af0;
     border-radius: 3px;
