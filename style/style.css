@@ -97,7 +97,7 @@ body::before {
   background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
-  filter: saturate(0.3); 
+  filter: saturate(0.5); 
 }
     /* background-image:
         linear-gradient(rgba(19, 19, 45, 0.7), rgba(9, 9, 15, 0.85)),
@@ -350,4 +350,12 @@ ul li {
     width: 80%;
     max-width: 900px;
     margin: 0 auto 40px;
+
+}
+.header-link {
+  background-color: #141420;
+  padding: 0.85rem 0.50rem;            
+  width: fit-content;        
+  max-width: 100%; 
+  margin: 0 auto;          
 }
