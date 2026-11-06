@@ -1,16 +1,12 @@
-name: Fondo braille aleatorio
+name: Generate new background
 
 on:
   schedule:
-    # 12:00 hora de Chile (UTC-3, horario de verano actual) = 15:00 UTC.
-    # El cron de GitHub va en UTC y NO sigue el cambio de hora: cuando Chile
-    # pase a UTC-4 (3 de abril de 2027) esto correrá a las 11:00 locales;
-    # para mantener las 12:00 cámbialo a "0 16 * * *".
     - cron: "0 15 * * *"
-  workflow_dispatch:         # botón "Run workflow" para probarlo a mano
+  workflow_dispatch:        
 
 permissions:
-  contents: write            # necesario para que el workflow pueda hacer push
+  contents: write           
 
 concurrency:
   group: braille-fondo
@@ -20,19 +16,19 @@ jobs:
   generar:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout del sitio
+      - name: Site Checkout
         uses: actions/checkout@v4
 
-      - name: Checkout del generador
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           repository: finixtavh/braille
           path: generador
 
-      - name: Instalar dependencias
+      - name: Dependencies
         run: python3 -m pip install numpy pillow
 
-      - name: Generar imagen nueva
+      - name: Gen new background
         id: gen
         run: |
           python3 generador/braille_gen.py --font-size 17 \
@@ -43,9 +39,9 @@ jobs:
 
       - name: Commit y push
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "finixtavh"
+          git config user.email "68766717+finixtavh@users.noreply.github.com"
           git add img/braille.png
           git diff --cached --quiet && exit 0
-          git commit -m "chore: nuevo fondo braille (seed ${{ steps.gen.outputs.seed }})"
+          git commit -m "chore: new background (seed ${{ steps.gen.outputs.seed }})"
           git push
