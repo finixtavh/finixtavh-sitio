@@ -95,7 +95,7 @@ body::before {
     linear-gradient(rgba(19, 19, 45, 0.7), rgba(10, 10, 19, 0.95)),
     url("../img/braille.png");
   background-size: auto;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   filter: saturate(0.5); 
 }
