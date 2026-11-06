@@ -73,15 +73,33 @@ html {
 }
 
 body {
-    font-family: "JetBrainsMonoNerd", monospace;
-    font-weight: normal;
-    color: #cdd6f4;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flow-root;
-    background-color: #13131e;
-    background-image:
+  font-family: "JetBrainsMonoNerd", monospace;
+  font-weight: normal;
+  color: #cdd6f4;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flow-root;
+  background-color: #13131e;
+  position: relative;
+  isolation: isolate;   
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(19, 19, 45, 0.7), rgba(10, 10, 19, 0.95)),
+    url("../img/braille.png");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: saturate(0.3); 
+}
+    /* background-image:
         linear-gradient(rgba(19, 19, 45, 0.7), rgba(9, 9, 15, 0.85)),
         url("../img/background3.png"), 
         url("../img/background2.png"),
@@ -92,7 +110,8 @@ body {
     background-position: center, center 0%, center 33.33%, center 66.67%, center 100%;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
     background-attachment: local, local, local, local, local;
-}
+    */
+
 
 a {
     color: #f5e0dc;
